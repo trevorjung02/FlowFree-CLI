@@ -5,6 +5,7 @@
 
 *.vcxproj
 *.vcxproj.filters
+.vscode
 
 # User-specific files
 *.rsuser
