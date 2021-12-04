@@ -1,0 +1,41 @@
+include:
+  - project: "cybercalc/ci-scripts"
+    file: "base/gitlab-ci.yml"
+    ref: master
+  - project: "cybercalc/ci-scripts"
+    file: "cpp/gitlab-ci.yml"
+    ref: master
+
+variables:
+  SCRIPTS_REPO_REF: master
+
+stages:
+  - build
+
+.build:
+  extends: .scripts_cpp_conan_create
+  stage: build
+
+gcc-release:
+  extends: .build
+  variables:
+    COMPILER: gcc
+    BUILD_TYPE: release
+
+gcc-debug:
+  extends: .build
+  variables:
+    COMPILER: gcc
+    BUILD_TYPE: debug
+
+clang-release:
+  extends: .build
+  variables:
+    COMPILER: clang
+    BUILD_TYPE: release
+
+clang-debug:
+  extends: .build
+  variables:
+    COMPILER: clang
+    BUILD_TYPE: debug
