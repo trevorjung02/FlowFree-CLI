@@ -1,7 +1,7 @@
 # Flow Free Command Line Solver
 This program solves Flow Free puzzles. 
 
-## To use:
+## Instructions for Windows users:
 Download and unzip the latest release. No need to install.
 ### Run without input file: 
 Run flowfree-cli.exe directly. Input the board in the console that pops up.
