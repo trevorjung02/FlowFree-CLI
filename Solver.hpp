@@ -31,7 +31,6 @@ public:
 	board get_solution();
 	void tseitin(shared_ptr<BoolExpr> b);
 	Minisat::Lit makeVar();
-	void print_model_vals();
 
 private:
 	void init_vars();
