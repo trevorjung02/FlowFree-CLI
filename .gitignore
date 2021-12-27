@@ -6,6 +6,7 @@
 *.vcxproj
 *.vcxproj.filters
 .vscode
+CMakeSettings.json
 
 # User-specific files
 *.rsuser
